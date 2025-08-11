@@ -1,40 +1,54 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f4f6f8;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  width: 100%;
   display: flex;
-  flex-direction: column; /*put elements in a column */
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 #search {
   width: 300px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #000000;
-  border-radius: 10px; /*put a border around the input*/
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#search:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
 }
 
 button {
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 10px 20px;
   background-color: #007bff;
   color: white;
-  border-radius: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -43,25 +57,52 @@ button:hover {
 
 #results {
   display: flex;
-  flex-wrap: wrap; /* allows items to wrap to the next line */
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .image {
-  height: 200px;
-  width: auto;
-  overflow: hidden; /* ensures the image fits within the container */
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
 }
 
 .image img {
   width: 100%;
-  height: auto;
-  object-fit: cover; /* ensures the image covers the container */
+  height: 100%;
+  object-fit: contain;
 }
 
-.card {
-  border: 1px solid #000000;
-  padding: 10px;
-  width: 200px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* adds shadow to the card */
+.card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.card .rating {
+  color: #ffc107;
+  font-size: 14px;
+  margin-top: 5px;
 }

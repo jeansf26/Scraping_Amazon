@@ -3,10 +3,15 @@ const results = document.getElementById("results"); //get the results container
 const searchInput = document.querySelector("#search"); // get the search input element
 
 // Add an event listener to the button
-// When the button is clicked, it will call the getdata function
-// Note: we use .addEventListener instead of .onclick to avoid calling the function immediately
 
-button.addEventListener("click", getdata);
+button.addEventListener("click", () => {
+  if (searchInput.value.trim() === "") {
+    // If the search input is empty, log an error and return
+    alert("please enter a keyword to search.");
+    return;
+  }
+  getdata(); // call the getdata function to fetch and display data
+});
 
 // Function to fetch data from the API and display it
 async function getdata() {
@@ -21,7 +26,7 @@ async function getdata() {
     // Check if the data is an array and has items
     // If not, log an error and return
     if (!Array.isArray(data) || data.length === 0) {
-      console.error("Nenhum dado encontrado ou formato inválido.");
+      console.error("any data found for the given keyword.");
       return;
     }
 
@@ -42,6 +47,6 @@ async function getdata() {
       results.appendChild(card);
     });
   } catch (err) {
-    console.error("Erro ao buscar dados:", err);
+    console.error("error finding data:", err);
   }
 }

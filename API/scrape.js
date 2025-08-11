@@ -10,7 +10,7 @@ async function scrapeAmazon(keyword) {
     headers: {
       "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9,pt-BR,pt;q=0.8",
     },
   }); // do the GET request with headers to mimic a browser
 
@@ -32,7 +32,9 @@ function getdata(html) {
   items.forEach((item) => {
     const title = item.querySelector("h2 span"); // get the title
     const rating = item.querySelector(".a-icon-star-mini span"); // get the rating
-    const numberOfRatings = item.querySelector(".a-size-base"); // get the number of ratings
+    const numberOfRatings = item.querySelector(
+      ".a-link-normal .a-size-base.s-underline-text"
+    ); // get the number of ratings
     const image = item.querySelector("img.s-image"); // get the image URL
 
     // only add to results if all data is present
