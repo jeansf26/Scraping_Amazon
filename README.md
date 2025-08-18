@@ -34,12 +34,12 @@ The backend fetches Amazon search results and extracts product details, while th
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/jeansf26/Scraping_Amazon.git
+cd Scraping_Amazon
 ```  
 ### 2️⃣ Backend setup (Bun)
 ```bash
-cd backend
+cd API
 bun install
 ```
 Run the backend:
@@ -47,8 +47,9 @@ Run the backend:
 bun run index.js
 ```
 ### 3️⃣ Frontend setup (Vite)
+After running the backend, open a new terminal and follow the next steps:
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 Run the frontend in development mode:
