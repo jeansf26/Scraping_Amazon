@@ -10,8 +10,8 @@ The backend fetches Amazon search results and extracts product details, while th
 - HTML5, CSS3, JavaScript
   
 **Backend (API)**: 
-- [Bun](https://bun.sh/) as the runtime and package manager.  
-- [Express](https://expressjs.com/)
+- NodeJS.  
+- Express.
 - Axios
 - JSDOM
 - Other dependencies as needed
@@ -40,11 +40,11 @@ cd Scraping_Amazon
 ### 2️⃣ Backend setup (Bun)
 ```bash
 cd API
-bun install
+npm install
 ```
 Run the backend:
 ```bash
-bun run index.js
+node index.js
 ```
 ### 3️⃣ Frontend setup (Vite)
 After running the backend, open a new terminal and follow the next steps:
