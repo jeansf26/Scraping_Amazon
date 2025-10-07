@@ -42,7 +42,7 @@ async function getdata() {
         <img src="${item.imageUrl}"/>
         </div>
         <h3>${item.title}</h3>
-        <p>⭐ ${item.rating} (${item.numberOfRatings})</p>
+        <p>⭐ ${item.rating} ${item.numberOfRatings}</p>
       `;
       results.appendChild(card);
     });
