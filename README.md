@@ -1,6 +1,6 @@
 # Amazon Scraper Project
 
-This project is a simple **Amazon product scraper** with a **Bun + Express backend** and a **Vite-powered frontend**.  
+This project is a simple **Amazon product scraper** with a **NodeJS + Express backend** and a **Vite-powered frontend**.  
 The backend fetches Amazon search results and extracts product details, while the frontend provides a user-friendly interface to display them.
 
 ## 🚀 Technologies Used
